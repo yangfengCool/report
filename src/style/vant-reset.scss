@@ -1,0 +1,82 @@
+.one-cell {
+  .van-cell {
+    font-size: 16px;
+    color: #171826;
+    padding: 15px 16px;
+    .van-cell__title {
+      width: auto;
+    }
+    .van-field__control {
+      font-size: 14px;
+      color: #9B9CA3;
+    }
+    .van-cell__value {
+      font-size: 13px;
+    }
+  }
+}
+
+// 选择器重置样式
+.j-date-time-picker {
+  .j-picker-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 64px;
+    font-size: 16px;
+    .header-title {
+      min-width: 80px;
+      color: #171826;
+      font-size: 20px;
+    }
+    .j-icon {
+      color: #C0C4CC;
+      text-align: right;
+    }
+  }
+
+  .picker-footer {}
+
+  .van-picker__frame {
+    background: rgba(42, 190, 209, 0.05);
+    &::after, &::before {
+      border: none;
+    }
+  }
+  .van-picker-column__item {
+    font-size: 18px;
+  }
+  .van-picker-column__item--selected {
+    color: #2ABED1;
+    font-size: 20px;
+  }
+}
+
+// // cell右侧group样式
+// .van-cell-group {
+//   .van-cell {
+//     .van-cell__value {
+//       font-size: 14px;
+//     }
+//     .van-icon.van-icon-arrow {
+//       color: #C0C4CC;
+//     }
+//   }
+// }
+
+// 重置icon样式
+
+// 重置checkbox disabled样式
+.van-checkbox__icon .van-icon {
+  // border: none;
+}
+
+.van-checkbox__icon--disabled.van-checkbox__icon--checked {
+  .van-icon {
+    color: #fff;
+    background-color: #e5e5e5;
+    border-color: transparent;
+  }
+}
