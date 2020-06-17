@@ -1,0 +1,32 @@
+# 语言
+language: node_js
+# 版本
+node_js: stable
+# 依赖安装方式
+# 安装命令
+install:
+  - yarn
+# 运行脚本
+script: yarn build
+# 脚本运行成功之后，运行多行脚本
+after_script:
+  - cd dist
+  - cp index.html 404.html
+  - echo "pro.abckey.com" > CNAME
+  - git init
+  - git config  user.name "yangfengCool"
+  - git config  user.email "494649783@qq.com"
+  - git add .
+  - git commit -m "Automatically update from travis-ci"
+  - git push --quiet --force  "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+# 官方提供的 github-page 构建
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  keep_history: true
+  on:
+    branch: master
+branches:
+  only:
+    - master
