@@ -23,7 +23,7 @@ after_script:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GH_TOKEN
+  github_token: d2b01b9b83aa4efe75f334f70ee4ea1ae2440b4c
   keep_history: true
   on:
     branch: master
